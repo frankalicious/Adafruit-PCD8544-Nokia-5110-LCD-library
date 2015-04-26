@@ -24,6 +24,12 @@ All text above, and the splash screen below must be included in any redistributi
   #include "WProgram.h"
 #endif
 
+#if defined ENERGIA//LM4
+#define portOutputRegister(x) portBASERegister(x)
+#endif
+
+
+
 #ifdef __AVR__
   #include <util/delay.h>
 #endif
